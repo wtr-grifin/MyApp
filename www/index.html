@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // Page init event
+    document.addEventListener('init', event => {
+      var page = event.target;
+
+      if (page.matches('#home-page')) {
+
+        page.querySelector('#level1-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('level1.html');
+        };
+
+        page.querySelector('#level2-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('level2.html');
+        };
+
+        page.querySelector('#level3-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('level3.html');
+        };
+
+      }
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+</head>
+<body>
+  <ons-navigator id="navigator" page="home.html"></ons-navigator>
+
+  <ons-template id="home.html">
+    <ons-page id="home-page">
+      <ons-toolbar>
+        <div class="center">タイピングゲーム「タイポ」</div>
+      </ons-toolbar>
+
+      <div class="content">
+        <p>タイポ</p>
+        <ons-button id="level1-button">Level 1</ons-button>
+        <div>英単語2~3文字</div>
+        <ons-button id="level2-button">Level 2</ons-button>
+        <div>英単語4~6文</div>
+        <ons-button id="level3-button">Level 3</ons-button>
+        <div>英単語7~10文字</div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<!-- typing game screen level 1 -->
+  <ons-template id="level1.html">
+    <ons-page id="level1-page">
+      <ons-toolbar>
+        <!-- <div class="left"><ons-back-button>Page 1</ons-back-button></div> -->
+        <div class="center">Level1</div>
+      </ons-toolbar>
+
+      <div class="content">
+        <p>This is the Level1 page.</p>
+        <ons-button id="start-button">Start</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<!-- typing game screen level 2 -->
+  <ons-template id="level2.html">
+    <ons-page id="level2-page">
+      <ons-toolbar>
+        <!-- <div class="left"><ons-back-button>Page 2</ons-back-button></div> -->
+        <div class="center">Level2</div>
+      </ons-toolbar>
+
+      <div class="content">
+        <p>2番目に難しいステージ</p>
+        <ons-button id="start-button">Start</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<!-- typing game screen level 3 -->
+  <ons-template id="level3.html">
+    <ons-page id="level3-page">
+      <ons-toolbar>
+        <!-- <div class="left"><ons-back-button>Page 3</ons-back-button></div> -->
+        <div class="center">Page 3</div>
+      </ons-toolbar>
+
+      <div class="content">
+        <p>３番目に難しいステージ</p>
+        <ons-button id="start-button">Start</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<!-- result screen -->
+  <ons-template id="result.html">
+    <ons-page id="result-page">
+      <ons-toolbar>
+        <!-- <div class="left"><ons-back-button>Page 3</ons-back-button></div> -->
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <div class="content">
+        <p>結果発表！</p>
+        <ons-button id="pop-button">Start</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+</body>
+</html>
