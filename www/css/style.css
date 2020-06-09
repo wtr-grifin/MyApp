@@ -1,13 +1,10 @@
-/**/
 body{
   margin: 0 auto;
   text-align: center;
 }
 
-.content{
-  margin-bottom: 5px;
+.center{
+  font-size: 20px;
+  font-weight: bold;
 }
 
-#push-botton{
-  
-}
