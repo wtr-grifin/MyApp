@@ -116,8 +116,8 @@
           }, 100);
         
           // target.textContent = 'click to replay';
-          if(timerLeft === 0){
-            pushPage("result-page");
+          if(timerLabel === 0.00){
+            document.querySelector('#navigator').pushPage("result-page");
           }
         }
       }
