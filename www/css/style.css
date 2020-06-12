@@ -1,6 +1,19 @@
 body{
   margin: 0 auto;
   text-align: center;
+  height: 400px;
+  width: 600px;
+  background: gray;
+}
+
+#restart-button ,#home-button{
+  width: 150px;
+}
+
+section > img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .center{
@@ -8,3 +21,85 @@ body{
   font-weight: bold;
 }
 
+.content{
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.content > .ex{
+  margin: 10px auto;
+}
+
+#mask {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal {
+  background-color: #fff;
+  width: 400px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 0.4s;
+  z-index: 2;
+}
+
+#modal > p {
+  margin: 0 0 5px;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  transform: translate(0, -500px);
+}
+
+ /*=== 画像の表示エリア ================================= */
+ .slide {
+  position   : relative;
+  overflow   : hidden;
+                    /* 画像のサイズに合わせて変更ください */
+  width      : 200px;
+  height     : 50px;
+  margin     : auto;      /* サンプルは中央寄せの背景：白 */
+  background : #fff;
+}
+ 
+ /*=== 画像の設定 ======================================= */
+.slide img {
+  display    : block;
+  position   : absolute;
+                      /* 画像のサイズを表示エリアに合せる */
+  width      : inherit;
+  height     : inherit;
+  opacity    : 0;
+  animation  : slideAnime 10s ease infinite;
+}
+ 
+ /*=== スライドのアニメーションを段差で開始する ========= */
+.slide img:nth-of-type(1) { animation-delay: 0s }
+.slide img:nth-of-type(2) { animation-delay: 2s }
+.slide img:nth-of-type(3) { animation-delay: 4s }
+.slide img:nth-of-type(4) { animation-delay: 6s }
+.slide img:nth-of-type(5) { animation-delay: 8s }
+ 
+ /*=== スライドのアニメーション ========================= */
+@keyframes slideAnime{
+   0% { opacity: 0 }
+   2% { opacity: 1 }
+  18% { opacity: 1 }
+  20% { opacity: 0 }
+ 100% { opacity: 0 }
+}

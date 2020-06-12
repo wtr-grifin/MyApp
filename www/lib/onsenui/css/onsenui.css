@@ -179,7 +179,7 @@ ons-splitter, ons-splitter-mask, ons-splitter-content, ons-splitter-side {
 
 ons-splitter-mask {
   z-index: 4;
-  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(0, 0, 0, 0.1); */
   display: none;
   opacity: 0;
 }

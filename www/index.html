@@ -25,7 +25,6 @@
       </ons-toolbar>
 
       <div class="content">
-        <p>タイポ</p>
         <ons-button id="level1-button">Level 1</ons-button>
         <div>英単語2~3文字</div>
         <ons-button id="level2-button">Level 2</ons-button>
@@ -46,13 +45,45 @@
 
       <div class="content">
         <p>This is the Level1 page.</p>
-        <p id="target">レベル1</p>
+        <!-- <div class="slide" id="makeImg">
+          <img id="slideImg1" src="" alt="英単語">
+          <img src="img/at.img.png" alt="an">
+          <img src="img/be.img.png" alt="be">
+          <img src="img/an.img.png" alt="do">
+          <img src="img/an.img.png" alt="go">
+          <img src="img/an.img.png" alt="he">
+          <img src="img/an.img.png" alt="if">
+          <img src="img/an.img.png" alt="is">
+          <img src="img/an.img.png" alt="it">
+          <img src="img/an.img.png" alt="me">
+          <img src="img/an.img.png" alt="no">
+          <img src="img/an.img.png" alt="of">
+          <img src="img/an.img.png" alt="oh">
+          <img src="img/an.img.png" alt="to">
+          <img src="img/an.img.png" alt="we">
+        </div> -->
+        <div class="type-js headline">
+          <h1 class="text-js" id="target">Let's type!</h1>
+        </div>
         <p class="info">
           Letter count: <span id="score">0</span>,
           Miss count: <span id="miss">0</span>,
           Time left: <span id="timer">0.00</span>
         </p>
-        <ons-button id="score-button">スペースキーかエンターキーを押したらゲームが開始するようにしたい</ons-button>
+        <ons-button id="score-button">スペースキーを押すとゲームが開始します</ons-button>
+
+        <div id="mask"class="hidden"></div>
+        <section id="modal" class="hidden">
+          <img src="img/rabbit-img.jpg">
+          <p>
+            タイポ数
+            <br>
+            <div id="taipo"></div>  
+          </p><br>
+         <div id="mask"class="hidden"></div>
+            <ons-button id="home-button">ホームに戻る</ons-button>
+            <ons-button id="restart-button">もう一度</ons-button>        
+        </section>
       </div>
     </ons-page>
   </ons-template>
@@ -73,7 +104,21 @@
           Miss count: <span id="miss">0</span>,
           Time left: <span id="timer">0.00</span>
         </p>
-        <ons-button id="score-button">スペースキーかエンターキーを押したらゲームが開始するようにしたい</ons-button>
+        <ons-button id="score-button">スペースキーを押してください</ons-button>
+        </ons-button>
+
+        <div id="mask"class="hidden"></div>
+        <section id="modal" class="hidden">
+         <img src="img/rabbit-img.jpg">
+          <p>
+            タイポ数
+            <br>
+            <div id="taipo"></div>  
+          </p><br>
+         <div id="mask"class="hidden"></div>
+            <ons-button id="home-button">ホームに戻る</ons-button>
+            <ons-button id="restart-button">もう一度</ons-button>        
+        </section>
       </div>
     </ons-page>
   </ons-template>
@@ -87,32 +132,31 @@
       </ons-toolbar>
 
       <div class="content">
-        <p>３番目に難しいステージ</p>
+        <p>3番目に難しいステージ</p>
         <p id="target">レベル3</p>
         <p class="info">
           Letter count: <span id="score">0</span>,
           Miss count: <span id="miss">0</span>,
           Time left: <span id="timer">0.00</span>
         </p>
-        <ons-button id="score-button">スペースキーかエンターキーを押したらゲームが開始するようにしたい</ons-button>
+        <ons-button id="score-button">スペースキーを押してください</ons-button>
+        </ons-button>
+
+        <div id="mask"class="hidden"></div>
+        <section id="modal" class="hidden">
+         <img src="img/turtle-img.jpg">
+          <p>
+            タイポ数
+            <br>
+            <div id="taipo"></div>  
+          </p><br>
+         <div id="mask"class="hidden"></div>
+            <ons-button id="home-button">ホームに戻る</ons-button>
+            <ons-button id="restart-button">もう一度</ons-button>        
+        </section>
       </div>
     </ons-page>
   </ons-template>
-
-<!-- result screen -->
-  <ons-template id="result.html">
-    <ons-page id="result-page">
-      <ons-toolbar>
-        <!-- <div class="left"><ons-back-button>Page 3</ons-back-button></div> -->
-        <div class="center"></div>
-      </ons-toolbar>
-
-      <div class="content">
-        <p>結果発表！</p>
-        <ons-button id="pop-button">Start</ons-button>
-      </div>
-    </ons-page>
   </ons-template>
-
 </body>
 </html>
